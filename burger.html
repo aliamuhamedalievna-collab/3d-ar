@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="kk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бургер 3D</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Бургер 3D</title>
+  <style>
+    body { background:#000; color:#fff; font-family:Arial,Helvetica,sans-serif; text-align:center; padding:20px; }
+    model-viewer { width:100%; max-width:700px; height:500px; background:#111; margin:auto; display:block; }
+  </style>
+
+  <!-- МІНДЕТТІ: model-viewer -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer@1.20.0/dist/model-viewer.min.js"></script>
 </head>
 <body>
+  <h1>Бургер (3D)</h1>
 
-<h1>Бургер 3D</h1>
-
-<model-viewer 
+  <model-viewer
     src="burger.glb"
-    ar
     auto-rotate
     camera-controls
-    shadow-intensity="1"
-    style="width:100%; height:400px;">
-</model-viewer>
-
-<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/model-viewer/3.3.3/model-viewer.min.js"></script>
+    ar
+    shadow-intensity="1">
+  </model-viewer>
 </body>
 </html>
