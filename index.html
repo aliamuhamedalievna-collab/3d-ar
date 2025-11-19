@@ -1,46 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="kk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
-  <title>AR 3D — тест</title>
-  <style>
-    html,body{height:100%;margin:0;background:#000;color:#fff;font-family:system-ui,Roboto,Arial}
-    #info { position: absolute; left:10px; top:10px; z-index:20; background: rgba(0,0,0,0.45); padding:8px 10px; border-radius:8px; font-size:14px; }
-    a { color: #fff; text-decoration: underline; }
-    a-scene { width:100%; height:100vh; display:block; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Тамақ Мәзірі</title>
 
-  <!-- A-Frame + AR.js (marker-based) -->
-  <script src="https://aframe.io/releases/1.4.3/aframe.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+    <style>
+        body {
+            background:#000;
+            color:#fff;
+            font-family: Arial, sans-serif;
+            text-align:center;
+            padding-top: 50px;
+        }
+        a {
+            display: inline-block;
+            padding: 15px 25px;
+            background: #444;
+            border-radius: 10px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        a:hover {
+            background: #ff6600;
+        }
+    </style>
 </head>
+
 <body>
-  <div id="info">Камераға рұқсат беріңіз. Hiro маркерін камераға бағыттаңыз.</div>
 
-  <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
-    <a-entity camera></a-entity>
+    <h1>3D Мәзір</h1>
 
-    <!-- Hiro маркері (pattern файлына сілтеме) -->
-    <a-marker type="pattern"
-      url="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/examples/marker-training/examples/pattern-files/pattern-hiro.patt">
+    <a href="menu.html">Мәзірді ашу</a>
 
-      <!-- Мұнда өзіңіздің 3D моделі URL-ын қоюға болады -->
-      <a-entity 
-        gltf-model="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/Duck/glTF/Duck.gltf"
-        scale="0.02 0.02 0.02"
-        rotation="-90 0 0"
-        position="0 0 0"
-        animation-mixer>
-      </a-entity>
-
-      <a-plane position="0 -0.55 0" rotation="-90 0 0" width="1.6" height="0.5" material="color:#0f1724; opacity:0.85;">
-        <a-text value="Ғылыми жоба — модель" align="center" color="#fff" position="0 0 0.01" width="2"></a-text>
-      </a-plane>
-    </a-marker>
-
-    <a-entity light="type: directional; intensity: 0.9;" position="1 2 1"></a-entity>
-    <a-entity light="type: ambient; intensity: 0.4"></a-entity>
-  </a-scene>
 </body>
 </html>
