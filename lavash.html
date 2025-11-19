@@ -1,47 +1,24 @@
 <!DOCTYPE html>
 <html lang="kk">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Лаваш 3D</title>
-
-<style>
-    body {
-        background: #000;
-        color: #fff;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        padding: 20px;
-    }
-
-    model-viewer {
-        width: 100%;
-        max-width: 700px;
-        height: 500px;
-        background: #111;
-        margin: auto;
-        display: block;
-    }
-</style>
-
-<!-- model-viewer қосу -->
-<script type="module"
-    src="https://unpkg.com/@google/model-viewer@1.20.0/dist/model-viewer.min.js">
-</script>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Бургер 3D</title>
+  <style>
+    body { background:#000; color:#fff; font-family:Arial; text-align:center; padding:20px; }
+    model-viewer { width:100%; max-width:700px; height:500px; background:#111; margin:auto; display:block; }
+    a { color:#ff9800; font-size:20px; }
+  </style>
+  <script type="module" src="https://unpkg.com/@google/model-viewer@1.20.0/dist/model-viewer.min.js"></script>
 </head>
-
 <body>
 
-    <h1>Лаваш 3D</h1>
+  <h1>Бургер 3D</h1>
 
-    <model-viewer
-        src="lavash.glb"
-        auto-rotate
-        camera-controls
-        ar
-        shadow-intensity="1">
-    </model-viewer>
+  <model-viewer src="burger.glb" auto-rotate camera-controls shadow-intensity="1"></model-viewer>
+
+  <br>
+  <a href="index.html">⬅ Артқа</a>
 
 </body>
 </html>
